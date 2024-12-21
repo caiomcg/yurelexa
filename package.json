@@ -1,0 +1,16 @@
+{
+  "name": "yurelexa",
+  "version": "1.0.0",
+  "description": "Yurelexa is an alarm assistant for Discord",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+	"start": "node index.js"
+  },
+  "author": "caiomcg",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.7"
+  }
+}
