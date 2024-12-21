@@ -11,7 +11,25 @@ const __dirname = dirname(__filename);
 dotenv.config();
 const { DISCORD_TOKEN, DISCORD_CLIENT_ID, DISCORD_GUILD_ID } = process.env;
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({ 
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.DirectMessages,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.GuildVoiceStates
+    ],
+    permissions: [
+        'SendMessages',
+        'Connect',
+        'Speak',
+        'UseVAD',
+        'ViewChannel',
+        'SendMessagesInThreads',
+        'ReadMessageHistory',
+        'MentionEveryone'
+    ]
+});
+
 client.commands = new Collection();
 const commands = [];
 
